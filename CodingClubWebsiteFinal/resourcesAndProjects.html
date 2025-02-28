@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Club Website</title>
+    <style>
+
+    
+            body{ margin: 0;
+                padding: 0;
+                background: linear-gradient(to bottom right, hsla(244, 100%, 50%, 0.989), #00ddff);
+                color: #fff;}
+           
+        .header {background-image: url("code2.jpg");
+                      padding: 55px;
+                      text-align: center;
+                      opacity: 0.75;}
+
+                      
+        .navigationBar {overflow: hidden;
+                        background-color: #0e2757;}
+
+
+/* Style navigation bar links */
+       .navigationBar a{float: left;
+                             display: block;
+                             color: #f2f2f2;
+                             text-align: center;
+                             padding: 14px 16px;
+                             text-decoration: none;
+                             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+/* Change color on hover */
+        .navigationBar a:hover {background-color: #ddd;
+                                 color: #0a0186;}
+
+
+         .footer {padding: 20px;
+                   text-align: center;
+                   background-image: url("coding.jpg");
+                   opacity: 0.8;
+                   margin-top: 20px;
+                }
+               
+         .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+            border-radius: 10px;
+        }
+
+        .columnText{float: right;
+                    width: 60%;
+                    padding: 60px;}
+        
+        .row::after {content: ""; 
+                     clear: both;
+                    display: table;}
+                    
+        .column {float: left;
+                 width: 25%;
+                 padding: 10px;}
+
+
+   </style>
+</head>
+<body>
+
+             <div class="header">
+             </div>
+
+               <div class="navigationBar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="events.html">Events</a>
+                <a href="resourcesAndProjects.html">Resources & Projects</a>
+               </div>
+
+               <div class="container">
+               <h1 style="text-align: center;">Resources & Projects of the Coding Club</h1>
+               </div>
+  
+               <div class="container">
+                <h1 style="text-align: center;">GitHub Projects</h1>
+                <div class="row">
+                    
+                 <div class="column">
+                <img src="laptopWithCode-removebg-preview.png" alt="Laptop With Code">
+                 </div>
+
+                 <div class="columnText"
+                <p style="text-align: center;">Welcome to our coding club's GitHub hub!
+                     Here, we collaborate on exciting projects, learn from each other, 
+                     and build a portfolio of real-world coding experience. Whether 
+                     you're a seasoned developer or just starting out, you'll find a
+                      welcoming space to contribute, experiment, and grow. Dive into 
+                      our repositories, contribute to discussions, and let's build something
+                       amazing together!"</p>
+                </div>
+            </div>
+          
+               
+
+</body>
+</html>
