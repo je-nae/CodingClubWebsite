@@ -1,109 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Coding Club Website</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: linear-gradient(#000066, black);
+            color: #fff;
+        }
 
-    
-            body{ margin: 0;
-                padding: 0;
-                background: linear-gradient(to bottom right, hsla(244, 100%, 50%, 0.989), #00ddff);
-                color: #fff;}
-           
-        .header {background-image: url("code2.jpg");
+        .bg {
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            height: 300px;
+            width: 100%;
+        }
+
+        .header {background-image: url("codeLaptop.png");
                       padding: 55px;
+                      
                       text-align: center;
                       opacity: 0.75;}
-
                       
-        .navigationBar {overflow: hidden;
+        .navigationBar {position: sticky; 
+                        top:0;
+                        overflow: auto;
+                        width: 100%;
                         background-color: #0e2757;}
 
 
 /* Style navigation bar links */
-       .navigationBar a{float: left;
+        .navigationBar a{    float: left;
                              display: block;
-                             color: #f2f2f2;
-                             text-align: center;
+                             color: #f2f2f2;                      
                              padding: 14px 16px;
                              text-decoration: none;
-                             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+                             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            font-size: 17px;}
 
 /* Change color on hover */
         .navigationBar a:hover {background-color: #ddd;
                                  color: #0a0186;}
+    
+          
+        .navigationBar a.active {background-color: #3b87aa;
+                          color: white;}
+        
+        .navigationBar .search-container {float: right;}
 
-
-         .footer {padding: 20px;
-                   text-align: center;
-                   background-image: url("coding.jpg");
-                   opacity: 0.8;
-                   margin-top: 20px;
-                }
-               
-         .container {
+        .navigationBar input[type=text] {padding: 4px;
+                                  margin-top: 8px;
+                                  font-size: 17px;
+                                  border: none;}
+      
+        .navigationBar .search-container button:hover { background: #ccc;}
+ 
+        .container {
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(170, 175, 187);
         }
 
-        .columnText{float: right;
-                    width: 60%;
-                    padding: 60px;}
+        .columnText {
+            float: right;
+            width: 60%;
+            padding: 60px;
+        }
+
+        .columnSplit {
+            float: left;
+            width: 50%; /* Adjusted to 50% to take up half the container */
+            padding: 10px;
+            height: auto;
+            text-align: center;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
         
-        .row::after {content: ""; 
-                     clear: both;
-                    display: table;}
-                    
-        .column {float: left;
-                 width: 25%;
-                 padding: 10px;}
+        .columnSplit:nth-child(odd) {
+            padding-right: 20px; /* Add some spacing between the columns */
+        }
 
+        .columnSplit:nth-child(even) {
+            padding-left: 20px; /* Add some spacing between the columns */
+        }
 
-   </style>
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #0e2757;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        .column2 {
+            float: left;
+            width: 0;
+            padding: 10px;
+            margin-left: 300px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 6px 2px;
+            border-radius: 15px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-instagram {
+            background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #0077B5;
+            color: white;
+        }
+
+        .fa-github {
+            background: #ffffff;
+            color: #0e2757;
+        }
+
+        .bg {
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 190px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <div class="header">
+        <h1 style="font-size: 50px">The Coding Club</h1>
+    </div>
 
-             <div class="header">
-             </div>
+    <div class="navigationBar">
+        <a href="index.html"></i>Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a class="active" href="resourcesAndProjects.html">Resources & Projects</a>
+        <a href="contactUs.html">Contact Us</a>
+    </div>
 
-               <div class="navigationBar">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="events.html">Events</a>
-                <a href="resourcesAndProjects.html">Resources & Projects</a>
-               </div>
+    <div class="container">
+        <h1 style="text-align: center;">Resources & Projects of the Coding Club</h1>
+    </div>
 
-               <div class="container">
-               <h1 style="text-align: center;">Resources & Projects of the Coding Club</h1>
-               </div>
-  
-               <div class="container">
-                <h1 style="text-align: center;">GitHub Projects</h1>
-                <div class="row">
-                    
-                 <div class="column">
+    <div class="container">
+        <h1 style="text-align: center;">GitHub Projects</h1>
+        <div class="row">
+            <div class="column">
                 <img src="laptopWithCode-removebg-preview.png" alt="Laptop With Code">
-                 </div>
+            </div>
+            <div class="columnText">
+                <p style="text-align: center; font-size: 22px;">Welcome to our coding club's GitHub hub! Here, we collaborate on exciting projects, learn from each other, and build a portfolio of real-world coding experience. Whether you're a seasoned developer or just starting out, you'll find a welcoming space to contribute, experiment, and grow. Dive into our repositories, contribute to discussions, and let's build something amazing together!"</p>
+                <p style="text-align: center; font-size: 20px;"><a href="https://github.com/CODINGCLUB404">Coding Club GitHub</a></p>
+            </div>
+        </div>
+    </div>
 
-                 <div class="columnText"
-                <p style="text-align: center;">Welcome to our coding club's GitHub hub!
-                     Here, we collaborate on exciting projects, learn from each other, 
-                     and build a portfolio of real-world coding experience. Whether 
-                     you're a seasoned developer or just starting out, you'll find a
-                      welcoming space to contribute, experiment, and grow. Dive into 
-                      our repositories, contribute to discussions, and let's build something
-                       amazing together!"</p>
+    <div class="container">
+        <div style="text-align: center;">
+            <h1>Recommended Resources:</h1>
+        </div>
+        <div class="row">
+            <div class="columnSplit">
+                <h2>Tutorials On Different Types of Programming Languages</h2>
+                <a href="https://www.w3schools.com/">W3schoools Online Web Tutorials</a>
+
+                <h2>Premium Lessons for Free</h2>
+                <a href="https://education.github.com/pack">GitHub Student Developer Pack</a>
+
+                <h2>Developer News and New Technologies</h2>
+                <a href="https://daily.dev/">daily.dev | Where developers suffer together</a>
+
+                <h2>Road Map For Developers</h2>
+                <a href="https://roadmap.sh/">Developer Roadmaps - roadmap.sh</a>
+
+                <h2>Cheatsheets and Quick References</h2>
+                <a href="https://quickref.me/">QuickRef.ME - Quick Reference Cheat Sheet</a>
+            </div>
+
+            <div class="columnSplit">
+                <h2>Achieve Mastery Through Challenges</h2>
+                <a href="https://www.codewars.com/">Codewars - Achieve mastery through coding practice and developer mentorship</a>
+
+                <h2>Multiple Projects You Can Work On</h2>
+                <a href="https://1000projects.org/">1000 Projects - Free BTech BE Projects | MTech ME Projects | MCA Projects | MBA Projects</a>
+
+                <h2>Cyber Security: Hack the Box</h2>
+                <a href="https://www.hackthebox.com/">Hack The Box: The #1 Cybersecurity Performance Center</a>
+
+                <h2>Cyber Security</h2>
+                <a href="https://tryhackme.com/">Learn Cyber Security | TryHackMe Cyber Trainingr</a>
+
+                <h2>Best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews</h2>
+                <a href="https://leetcode.com/">LeetCode - The World's Leading Online Programming Learning Platform</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+<h1 style="text-align: center;">Projects We Have Built:</h1>
+<div class="row">
+    <div class="column">
+        <img src="calculatorProjectApp.jpg" alt="Laptop With Code" style="width: 400px; height: 200px; margin-top: 30px; border-radius: 15px;">
+    </div>
+    <div class="columnText">
+        <p style="text-align: right; font-size: 22px;">Our club's calculator app project kicked off with a flurry of brainstorming, 
+            where we divided tasks based on our diverse skill sets. Some members focused on designing the user interface, while others delved into the core logic, implementing mathematical functions.
+             We used a collaborative Git repository to manage our code, enabling us to work simultaneously and
+              resolve conflicts efficiently.</p>
+    </div>
+</div>
+
+<div class="row">
+<div class="column">
+    <img src="chatAppProjectFinal.png" alt="Laptop With Code" style="width: 400px; height: 250px; text-align: left; margin-top: 65px; border-radius: 15px;">
+</div>
+<div class="columnText">
+    <p style="text-align: right; font-size: 22px;">Our coding club embarked on building a chat application, leveraging JavaScript throughout 
+        the stack. We divided responsibilities, with some members focusing on the backend to enable real-time messaging, 
+        while others developed the cross-platform frontend interface. We implemented a Git workflow for version control and collaborative 
+        coding. This project provided valuable experience in client-server architecture, real-time data handling, and the collaborative nature
+         of software development.</p>
+</div>
+</div>
+
+<div class="row">
+    <div class="column">
+        <img src="floppyBird.png" alt="Laptop With Code" style="width: 400px; height: 250px; text-align: left; margin-top: 65px; border-radius: 15px;">
+    </div>
+    <div class="columnText">
+        <p style="text-align: right; font-size: 22px;">Our coding club's Flappy Bird game project was a nostalgic and challenging endeavor.
+             into teams, with some members focusing on the game logic using JavaScript and the Canvas API, handling bird physics, collision detection, 
+             and scorekeeping. Others worked on the visual elements, creating pixel art for the bird, pipes, and background, and implementing animations. 
+              This project honed our skills in game development fundamentals, while also fostering teamwork and creative problem-solving.</p>
+    </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <footer>
+        <div class="bg" style="background-image: url(cool.jpg);">
+            <div class="row">
+                <div class="column2">
+                    <a href="https://www.linkedin.com/in/coding-club-3841b1349" class="fa fa-linkedin"></a>
+                </div>
+                <div class="column2">
+            <a href="https://www.instagram.com/codingclub404?igsh=MTB4amQzNWxnZDgzeg==" class="fa fa-instagram"></a>
+                </div>
+                <div class="column2">
+                    <a href="https://github.com/CODINGCLUB404" class="fa fa-github"></a>
                 </div>
             </div>
-          
-               
-
+            <p style="text-align: center">Email: codingclub@gmail.com</p>
+            <p style="text-align: center;">&copy; 2025 All Rights Reserved | Eduvos Midrand</p>
+        </div>
+    </footer>
 </body>
 </html>
